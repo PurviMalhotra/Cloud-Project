@@ -1,0 +1,48 @@
+{
+  "name": "arcade_hub",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "server": "node server/index.js",
+    "dev:full": "npm run server & npm run dev",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "node --test tests/*.test.mjs",
+    "aws:template": "node scripts/template.mjs",
+    "aws:status": "node scripts/aws.mjs status",
+    "aws:prepare": "node scripts/aws.mjs prepare",
+    "aws:deploy": "node scripts/aws.mjs deploy",
+    "aws:publish": "node scripts/aws.mjs publish",
+    "aws:destroy": "node scripts/aws.mjs destroy",
+    "aws:smoke": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cloudformation": "^3.1156.0",
+    "@aws-sdk/client-cloudfront": "^3.1156.0",
+    "@aws-sdk/client-dynamodb": "^3.1156.0",
+    "@aws-sdk/client-freetier": "^3.1156.0",
+    "@aws-sdk/client-s3": "^3.1156.0",
+    "@aws-sdk/client-sts": "^3.1156.0",
+    "@aws-sdk/lib-dynamodb": "^3.1156.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.13.0"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.1156.0",
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "esbuild": "^0.28.2",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "vite": "^7.2.4"
+  }
+}

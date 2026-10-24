@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+/* Page wrapper */
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #080c18;
+  font-family: "Rajdhani", sans-serif;
+}
+
+/* Centered container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #080c18;
+  color: #e2e8f8;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ambient glow */
+.login-container::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 500px;
+  background: radial-gradient(
+    ellipse,
+    rgba(99, 140, 255, 0.07) 0%,
+    transparent 70%
+  );
+}
+
+/* scanlines */
+.login-container::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.06) 2px,
+    rgba(0, 0, 0, 0.06) 4px
+  );
+  z-index: 10;
+}
+
+/* Card */
+.login-box {
+  background: #0e1425;
+  padding: 48px 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(99, 140, 255, 0.15);
+  min-width: 320px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: cardIn 0.4s ease both;
+  z-index: 1;
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* top-edge accent line */
+.login-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #638cff, transparent);
+  opacity: 0.6;
+}
+
+.login-box h1 {
+  margin: 0 0 36px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #638cff 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 14px rgba(99, 140, 255, 0.35));
+}
+
+/* Form */
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Inputs */
+.login-box input {
+  padding: 13px 16px;
+  border: 1px solid rgba(99, 140, 255, 0.2);
+  border-radius: 10px;
+  background: #141c32;
+  color: #e2e8f8;
+  font-size: 0.88rem;
+  font-family: "JetBrains Mono", monospace;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.login-box input::placeholder {
+  color: #5a6a8a;
+}
+
+.login-box input:focus {
+  outline: none;
+  border-color: rgba(99, 140, 255, 0.5);
+  background: #0e1425;
+}
+
+/* Submit button */
+.login-box button[type="submit"],
+.login-box button:not(.toggle-auth button) {
+  padding: 13px;
+  background: rgba(99, 140, 255, 0.15);
+  color: #638cff;
+  border: 1px solid rgba(99, 140, 255, 0.4);
+  border-radius: 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 8px;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.login-box button:hover {
+  background: rgba(99, 140, 255, 0.25);
+  border-color: rgba(99, 140, 255, 0.6);
+  box-shadow: 0 0 16px rgba(99, 140, 255, 0.2);
+}
+
+.login-box button:active {
+  transform: scale(0.98);
+}
+
+/* Error */
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.75rem;
+  font-family: "JetBrains Mono", monospace;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+/* Toggle link */
+.toggle-auth {
+  margin-top: 20px;
+  font-size: 0.78rem;
+  font-family: "JetBrains Mono", monospace;
+  color: #5a6a8a;
+  letter-spacing: 0.03em;
+}
+
+.toggle-auth span {
+  color: #638cff;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.toggle-auth span:hover {
+  color: #a78bfa;
+  text-decoration: underline;
+}

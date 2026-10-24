@@ -1,0 +1,106 @@
+.pong-page {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.pong-container {
+  min-height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 16px 36px;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(99, 140, 255, 0.16), transparent 44%),
+    radial-gradient(circle at 90% 16%, rgba(82, 255, 109, 0.12), transparent 42%),
+    var(--bg);
+}
+
+.pong-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pong-header h1 {
+  margin: 0;
+  font-family: "Press Start 2P", cursive;
+  font-size: clamp(1rem, 2.2vw, 1.35rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #8caeff 0%, #86ffc2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pong-score {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pong-score span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(99, 140, 255, 0.36);
+  background: rgba(14, 20, 37, 0.88);
+  color: #cfe0ff;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+}
+
+.pong-canvas {
+  width: min(820px, 100%);
+  height: auto;
+  border: 2px solid rgba(99, 140, 255, 0.5);
+  border-radius: 14px;
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(99, 140, 255, 0.22);
+  touch-action: none;
+}
+
+.pong-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.pong-actions button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(99, 140, 255, 0.56);
+  background: rgba(99, 140, 255, 0.18);
+  color: #dbe7ff;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.7rem;
+  transition:
+    background 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.pong-actions button:hover {
+  background: rgba(99, 140, 255, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 0 12px rgba(99, 140, 255, 0.28);
+}
+
+.pong-actions p {
+  margin: 0;
+  color: #9cb1da;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  text-align: center;
+}

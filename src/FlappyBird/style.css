@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+body.day {
+  background: linear-gradient(#7ecbff, #dff4ff);
+}
+
+body.night {
+  background: linear-gradient(#050b2e, #0b1d51);
+}
+
+canvas {
+  display: block;
+}
+
+.top-ui {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  z-index: 10;
+}
+
+.top-ui button,
+.top-ui select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.scoreboard {
+  color: white;
+  font-weight: 600;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: rgba(0,0,0,0.35);
+  z-index: 5;
+  pointer-events: none; /* 🔑 FIX */
+}
+
+.overlay.hidden {
+  display: none;
+}

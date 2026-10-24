@@ -1,0 +1,87 @@
+.game-boot {
+  flex: 1;
+  min-height: calc(100vh - 56px);
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(99, 140, 255, 0.18), transparent 44%),
+    radial-gradient(circle at 83% 18%, rgba(82, 255, 109, 0.14), transparent 38%),
+    var(--bg);
+}
+
+.game-boot-card {
+  width: min(540px, 100%);
+  border: 1px solid rgba(99, 140, 255, 0.34);
+  border-radius: 16px;
+  background: rgba(14, 20, 37, 0.9);
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.42),
+    0 0 20px rgba(99, 140, 255, 0.2);
+  padding: 30px 24px;
+  text-align: center;
+}
+
+.game-boot-kicker {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #93abda;
+}
+
+.game-boot-card h1 {
+  margin: 14px 0 18px;
+  font-family: "Press Start 2P", cursive;
+  font-size: clamp(1rem, 2.3vw, 1.5rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #638cff 0%, #8dffc0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.game-boot-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(99, 140, 255, 0.4);
+  background: rgba(8, 12, 24, 0.85);
+  overflow: hidden;
+}
+
+.game-boot-bar span {
+  display: block;
+  width: 36%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #638cff 0%, #8dffc0 100%);
+  animation: gameBootShift 1.4s ease-in-out infinite;
+}
+
+.game-boot-subtitle {
+  margin: 12px 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #afc1e8;
+}
+
+@keyframes gameBootShift {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  50% {
+    transform: translateX(135%);
+  }
+
+  100% {
+    transform: translateX(260%);
+  }
+}

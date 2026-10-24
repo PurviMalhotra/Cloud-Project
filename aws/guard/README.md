@@ -1,0 +1,1 @@
+Selected AWS-managed Guard rules from https://github.com/aws-cloudformation/aws-guard-rules-registry at commit 7f7340c26ae5d5e8874651dbffeb12e0e9f505b6. These cover private S3 access, TLS, encryption, and HTTPS CDN delivery. They are not a full compliance certification. Original license notices are preserved.
