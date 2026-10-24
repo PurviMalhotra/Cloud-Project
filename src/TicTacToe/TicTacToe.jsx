@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Navbar from "../Components/Navbar";
 import GameBoot from "../Components/GameBoot";
 import "../Components/GameBoot.css";
-import "./tictactoe.css";
+import "./TicTacToe.css";
 
 const WIN_LINES = [
   [0, 1, 2],

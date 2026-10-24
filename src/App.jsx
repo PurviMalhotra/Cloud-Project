@@ -8,7 +8,7 @@ import Login from "./Pages/Login";
 import FlappyBird from "./FlappyBird/FlappyBird";
 import Friends from "./Pages/Friends";
 import Snake from "./Snake/Snake";
-import TicTacToe from "./TicTacToe/tictactoe";
+import TicTacToe from "./TicTacToe/TicTacToe";
 import Shooter from "./Shooter/shooter";
 import LoadingScreen from "./Components/LoadingScreen";
 import BrickBreaker from "./BrickBreaker/BrickBreaker";
